@@ -1,5 +1,5 @@
 class Dictionary:
-    class Data:
+    class Node:
         def __init__(self, key: any, hash_value: int, value: any) -> None:
             self.key = key
             self.hash = hash_value
@@ -28,7 +28,7 @@ class Dictionary:
             i = (i + 1) % self.__capacity
 
         was_empty = not self.hash_table[i]
-        self.hash_table[i] = self.data(key, i, value)
+        self.hash_table[i] = self.Node(key, i, value)
         if was_empty:
             self.length += 1
             if self.length / self.__capacity > self.__load:
