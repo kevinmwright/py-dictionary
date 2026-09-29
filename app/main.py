@@ -1,8 +1,8 @@
 class Dictionary:
-    class data:
-        def __init__(self, key, hash, value):
+    class Data:
+        def __init__(self, key: any, hash_value: int, value: any) -> None:
             self.key = key
-            self.hash = hash
+            self.hash = hash_value
             self.value = value
 
     def __init__(self) -> None:
